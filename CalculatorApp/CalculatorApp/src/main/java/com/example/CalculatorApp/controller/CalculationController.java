@@ -1,30 +1,32 @@
 package com.example.CalculatorApp.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.CalculatorApp.service.CalculationService;
 
 @RestController
 public class CalculationController {
-
+    private static final Logger LOGGER=LoggerFactory.getLogger(CalculationController.class);
     @Autowired
     private CalculationService calculationService;
 
-    @PostMapping("/calculate")
-    public String calculate(@RequestParam int number) {
-        // Start threads for each calculation
-        new Thread(calculationService.calculateSquare(number)).start();
-        new Thread(calculationService.calculateCube(number)).start();
-        new Thread(calculationService.checkEvenOdd(number)).start();
-        new Thread(calculationService.checkPrime(number)).start();
-        new Thread(calculationService.checkArmstrong(number)).start();
-        new Thread(calculationService.checkPalindrome(number)).start();
-        new Thread(calculationService.calculateFactorial(number)).start();
-      //  new Thread(calculationService.calculateReverse(number)).start();
-
-        return "Calculations started for number: " + number;
+    @GetMapping("/calculate")
+    public String calculate() {
+        LOGGER.info("Request Coming For Calling Thread");
+        Thread th=new Thread(calculationService.calculateSquare());
+        th.start();
+       // new Thread(calculationService.calculateSquare(number)).start();
+        new Thread(calculationService.calculateCube()).start();
+        new Thread(calculationService.checkEvenOdd()).start();
+        new Thread(calculationService.checkPrime()).start();
+        new Thread(calculationService.checkArmstrong()).start();
+        new Thread(calculationService.checkPalindrome()).start();
+        new Thread(calculationService.calculateFactorial()).start();
+        LOGGER.info("Response Send Succesfully....");
+        return "Calculations started .....";
     }
 }

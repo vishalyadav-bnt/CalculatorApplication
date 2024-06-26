@@ -1,31 +1,49 @@
 package com.example.CalculatorApp.service;
+import java.util.Scanner;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
+import com.example.CalculatorApp.controller.CalculationController;
 
 @Service
 public class CalculationService {
+    Scanner sc=new Scanner (System.in);
+    static{
+        System.out.println("Enter Number");
+    }
+    int n=sc.nextInt();
+    private static final Logger LOGGER=LoggerFactory.getLogger(CalculationController.class);
 
-    public Runnable calculateSquare(int n) {
+    public Runnable calculateSquare() {
+        LOGGER.info("Getting Square....");
         return () -> {
             int square = n * n;
             System.out.println("Square of " + n + " is: " + square);
         };
     }
 
-    public Runnable calculateCube(int n) {
+    public Runnable calculateCube() {
+        LOGGER.info("Getting Cube....");
         return () -> {
             int cube = n * n * n;
             System.out.println("Cube of " + n + " is: " + cube);
         };
     }
 
-    public Runnable checkEvenOdd(int n) {
+    public Runnable checkEvenOdd() {
+        LOGGER.info("Checking Number....");
+
         return () -> {
             String evenOdd = (n % 2 == 0) ? "Even" : "Odd";
             System.out.println(n + " is " + evenOdd);
         };
     }
 
-    public Runnable checkPrime(int n) {
+    public Runnable checkPrime() {
+        LOGGER.info("Checking Number Is prime or not....");
+
         return () -> {
             boolean isPrime = true;
             if (n <= 1) {
@@ -42,18 +60,19 @@ public class CalculationService {
         };
     }
 
-    public Runnable checkArmstrong(int n) {
+    public Runnable checkArmstrong() {
+        LOGGER.info("Checking Number is Amstrong or not");
         return () -> {
             int originalNumber, remainder, result = 0, digits = 0;
 
             originalNumber = n;
 
-            // number of digits calculation
+          
             for (int temp = originalNumber; temp != 0; temp /= 10) {
                 digits++;
             }
 
-            // check Armstrong condition
+    
             for (int temp = originalNumber; temp != 0; temp /= 10) {
                 remainder = temp % 10;
                 result += Math.pow(remainder, digits);
@@ -67,13 +86,15 @@ public class CalculationService {
         };
     }
 
-    public Runnable checkPalindrome(int n) {
+    public Runnable checkPalindrome() {
+        LOGGER.info("Checking number pelindrome");
+
         return () -> {
             int originalNumber, reversedNumber = 0, remainder;
 
             originalNumber = n;
 
-            // reversed number calculation
+           
             for (int temp = originalNumber; temp != 0; temp /= 10) {
                 remainder = temp % 10;
                 reversedNumber = reversedNumber * 10 + remainder;
@@ -87,7 +108,8 @@ public class CalculationService {
         };
     }
 
-    public Runnable calculateFactorial(int n) {
+    public Runnable calculateFactorial() {
+        LOGGER.info("Calculating Factorial");
         return () -> {
             int factorial = 1;
             for (int i = 1; i <= n; i++) {
@@ -97,7 +119,8 @@ public class CalculationService {
         };
     }
 
-    public Runnable calculateReverse(int n) {
+    public Runnable calculateReverse() {
+        LOGGER.info("Calculating Rev Number");
         return () -> {
             int temp=n;
             int rev = 0;
