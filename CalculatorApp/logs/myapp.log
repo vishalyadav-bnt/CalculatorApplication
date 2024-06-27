@@ -1,0 +1,29 @@
+2024-06-26 22:48:39 [main] INFO  c.e.C.CalculatorAppApplication - Starting CalculatorAppApplication using Java 21.0.3 with PID 10444 (D:\CalculatorApplication\CalculatorApp\CalculatorApp\build\classes\java\main started by vishal.yadav in D:\CalculatorApplication\CalculatorApp)
+2024-06-26 22:48:39 [main] INFO  c.e.C.CalculatorAppApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-26 22:48:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-26 22:48:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-26 22:48:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-26 22:48:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-26 22:48:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1812 ms
+2024-06-26 22:50:17 [main] INFO  c.e.C.CalculatorAppApplication - Starting CalculatorAppApplication using Java 21.0.3 with PID 7756 (D:\CalculatorApplication\CalculatorApp\CalculatorApp\build\classes\java\main started by vishal.yadav in D:\CalculatorApplication\CalculatorApp)
+2024-06-26 22:50:17 [main] INFO  c.e.C.CalculatorAppApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-26 22:50:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-26 22:50:19 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-26 22:50:19 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-26 22:50:19 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-26 22:50:19 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1760 ms
+2024-06-26 22:50:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-06-26 22:50:29 [main] INFO  c.e.C.CalculatorAppApplication - Started CalculatorAppApplication in 12.536 seconds (process running for 13.106)
+2024-06-26 22:50:29 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-26 22:50:30 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-26 22:50:30 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-26 22:50:31 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 319 ms
+2024-06-26 22:50:45 [http-nio-8080-exec-4] INFO  c.e.C.c.CalculationController - Request Coming For Calling Thread
+2024-06-26 22:50:45 [http-nio-8080-exec-4] INFO  c.e.C.c.CalculationController - Getting Square....
+2024-06-26 22:50:45 [http-nio-8080-exec-4] INFO  c.e.C.c.CalculationController - Getting Cube....
+2024-06-26 22:50:45 [http-nio-8080-exec-4] INFO  c.e.C.c.CalculationController - Checking Number....
+2024-06-26 22:50:45 [http-nio-8080-exec-4] INFO  c.e.C.c.CalculationController - Checking Number Is prime or not....
+2024-06-26 22:50:45 [http-nio-8080-exec-4] INFO  c.e.C.c.CalculationController - Checking Number is Amstrong or not
+2024-06-26 22:50:45 [http-nio-8080-exec-4] INFO  c.e.C.c.CalculationController - Checking number pelindrome
+2024-06-26 22:50:45 [http-nio-8080-exec-4] INFO  c.e.C.c.CalculationController - Calculating Factorial
+2024-06-26 22:50:45 [http-nio-8080-exec-4] INFO  c.e.C.c.CalculationController - Response Send Succesfully....
