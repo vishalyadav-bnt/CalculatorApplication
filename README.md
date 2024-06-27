@@ -17,28 +17,23 @@ Setup
 ### Clone the repository:
 
 ### bash
-Copy code
 git clone https://github.com/yourusername/CalculatorApp.git
 
 cd CalculatorApp
 
 Build the project:
 
-bash
-Copy code
+### bash
+
 mvc clean package
 Run the application:
 
 bash
-Copy code
-
 java -jar target/CalculatorApp-1.0.jar
 
 Alternatively, you can use gradle to run the application:
 
 bash
-Copy code
-
 mvc spring-boot:run
 
 Access the application:
